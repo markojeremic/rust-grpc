@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package model;
+
+service ModelService {
+  rpc GetModelNumber (ModelRequest) returns (ModelResponse);
+}
+
+message ModelRequest {
+  int32 model_id = 1;
+}
+
+message ModelResponse {
+  int32 model_num = 1;
+}
